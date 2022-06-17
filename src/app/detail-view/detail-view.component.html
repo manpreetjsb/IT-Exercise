@@ -1,0 +1,16 @@
+<div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let element of data">
+    <mat-card class="card" class="mat-elevation-z4">
+      <mat-card-title-group>
+        <mat-card-title class="name">{{ element.name }}</mat-card-title>
+        <mat-card-subtitle>
+          <p class="desc">{{ element.shortDescription }}</p>
+          <p class="price">€ {{ element.price }}</p>
+        </mat-card-subtitle>
+
+
+        <img [src]="element.image" height="200" width="80" />
+      </mat-card-title-group>
+    </mat-card>
+  </div>
+</div>
